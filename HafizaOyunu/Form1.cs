@@ -29,29 +29,30 @@ namespace HafizaOyunu
         int puanOyncu1 = 0;
         int puanOyncu2 = 0;
 
+        String path = "../../hayvanlar/";
+
         private void setImages()
         {
-            images.Add(Image.FromFile(@"C:\Users\Eray\source\repos\HafizaOyunu\hayvanlar\kanguru.png"));
-            images.Add(Image.FromFile(@"C:\Users\Eray\source\repos\HafizaOyunu\hayvanlar\kaplumbaga.png"));
-            images.Add(Image.FromFile(@"C:\Users\Eray\source\repos\HafizaOyunu\hayvanlar\karga.png"));
-            images.Add(Image.FromFile(@"C:\Users\Eray\source\repos\HafizaOyunu\hayvanlar\kedi.png"));
-            images.Add(Image.FromFile(@"C:\Users\Eray\source\repos\HafizaOyunu\hayvanlar\kirpi.png"));
-            images.Add(Image.FromFile(@"C:\Users\Eray\source\repos\HafizaOyunu\hayvanlar\ordek.png"));
-            images.Add(Image.FromFile(@"C:\Users\Eray\source\repos\HafizaOyunu\hayvanlar\orumcek.png"));
-            images.Add(Image.FromFile(@"C:\Users\Eray\source\repos\HafizaOyunu\hayvanlar\panda.png"));
-            images.Add(Image.FromFile(@"C:\Users\Eray\source\repos\HafizaOyunu\hayvanlar\papagan.png"));
-            images.Add(Image.FromFile(@"C:\Users\Eray\source\repos\HafizaOyunu\hayvanlar\pelikan.png"));
-            images.Add(Image.FromFile(@"C:\Users\Eray\source\repos\HafizaOyunu\hayvanlar\penguen.png"));
-            images.Add(Image.FromFile(@"C:\Users\Eray\source\repos\HafizaOyunu\hayvanlar\salyangoz.png"));
-            images.Add(Image.FromFile(@"C:\Users\Eray\source\repos\HafizaOyunu\hayvanlar\sincap.png"));
-            images.Add(Image.FromFile(@"C:\Users\Eray\source\repos\HafizaOyunu\hayvanlar\tavsan.png"));
-            images.Add(Image.FromFile(@"C:\Users\Eray\source\repos\HafizaOyunu\hayvanlar\tavuk.png"));
-            images.Add(Image.FromFile(@"C:\Users\Eray\source\repos\HafizaOyunu\hayvanlar\ugurbocegi.png"));
-            images.Add(Image.FromFile(@"C:\Users\Eray\source\repos\HafizaOyunu\hayvanlar\yengec.png"));
-            images.Add(Image.FromFile(@"C:\Users\Eray\source\repos\HafizaOyunu\hayvanlar\yilan.png"));
-            images.Add(Image.FromFile(@"C:\Users\Eray\source\repos\HafizaOyunu\hayvanlar\yunus.png"));
-            images.Add(Image.FromFile(@"C:\Users\Eray\source\repos\HafizaOyunu\hayvanlar\zurafa.png"));
-            images.Add(Image.FromFile(@"C:\Users\Eray\source\repos\HafizaOyunu\hayvanlar\soru.png"));
+            images.Add(Image.FromFile(@$"{path}kanguru.png"));
+            images.Add(Image.FromFile(@$"{path}kaplumbaga.png"));
+            images.Add(Image.FromFile(@$"{path}karga.png"));
+            images.Add(Image.FromFile(@$"{path}kedi.png"));
+            images.Add(Image.FromFile(@$"{path}kirpi.png"));
+            images.Add(Image.FromFile(@$"{path}ordek.png"));
+            images.Add(Image.FromFile(@$"{path}orumcek.png"));
+            images.Add(Image.FromFile(@$"{path}panda.png"));
+            images.Add(Image.FromFile(@$"{path}papagan.png"));
+            images.Add(Image.FromFile(@$"{path}pelikan.png"));
+            images.Add(Image.FromFile(@$"{path}penguen.png"));
+            images.Add(Image.FromFile(@$"{path}salyangoz.png"));
+            images.Add(Image.FromFile(@$"{path}sincap.png"));
+            images.Add(Image.FromFile(@$"{path}tavsan.png"));
+            images.Add(Image.FromFile(@$"{path}tavuk.png"));
+            images.Add(Image.FromFile(@$"{path}ugurbocegi.png"));
+            images.Add(Image.FromFile(@$"{path}yengec.png"));
+            images.Add(Image.FromFile(@$"{path}yilan.png"));
+            images.Add(Image.FromFile(@$"{path}yunus.png"));
+            images.Add(Image.FromFile(@$"{path}zurafa.png"));
 
         }
 
@@ -105,7 +106,11 @@ namespace HafizaOyunu
                     }
 
                     esleme1.Visible = false;
-                    esleme2.Visible = false;
+                    if(esleme2 != null)
+                    {
+                        esleme2.Visible = false;
+
+                    }
                     esleme1 = null;
                     esleme2 = null;
                     secim = 0;
